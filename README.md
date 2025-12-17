@@ -1,7 +1,7 @@
 # pgAdminHW
 sql basics
 
---  Tablo Oluşturma
+	-- Tablo Oluşturma
 --------------------
 create table developers (
 
@@ -28,7 +28,7 @@ create table games (
 	
 	rates decimal(3, 1),
 
--- Foreign Key Tanımlama (One-to-Many)
+	-- Foreign Key Tanımlama (One-to-Many)
 ---------------------------------------
 
 constraint fk_developer foreign key(developer_id) references developers(developers_id) on delete set null
@@ -53,7 +53,7 @@ create table games_genres (
 	
 	genres_id int,
 
--- Foreign Key Tanımlama (Many-to-Many)
+	-- Foreign Key Tanımlama (Many-to-Many)
 ----------------------------------------
 
 constraint fk_game
@@ -68,7 +68,7 @@ constraint fk_genre
 
 
 
---  Veri Ekleme 
+	--  Veri Ekleme 
 ----------------
 insert into developers (company_name, country, founded_year) values 
 
@@ -82,7 +82,7 @@ insert into developers (company_name, country, founded_year) values
 
 ('CD Projekt Red', 'Polonya', 2002);
 
-
+--
 
 insert into games (title, price, release_date, developer_id, rates) values
 
@@ -105,8 +105,8 @@ insert into games (title, price, release_date, developer_id, rates) values
 ('The Witcher 3: Wild Hunt', 39.99, '2015-05-18', 5, 10),
 
 ('God of War', 49.99, '2018-04-20', 2, 10,)
-        
 
+--
 
 insert into genre (genre_name, genre_description) values
 
@@ -122,42 +122,42 @@ insert into genre (genre_name, genre_description) values
 
 ('Sports', 'Spor');
 
-
+--
 
 insert into games_genres (games_id, genres_id) values
 
---Fifa Online 3 (Spor)
+--Fifa Online 3 (Spor),
 (1,6),
 
---Grand Theft Auto: San Andreas (Aksiyon)
+--Grand Theft Auto: San Andreas (Aksiyon),
 (2,5),
 
 --Starfield (Aksiyon RPG),       
 (3,1), (3,5),       
 
---The Elder Scrolls V: Skyrim (Aksiyon, RPG, Open World)
+--The Elder Scrolls V: Skyrim (Aksiyon, RPG, Open World),
 (4,1), (4,2), (4,5),
 
---Red Dead Redemption 2 (Aksiyon)
+--Red Dead Redemption 2 (Aksiyon),
 (5,5),
 
---League of Legends (Moba)
+--League of Legends (Moba),
 (6,3),
 
---Cyberpunk 2077 (Aksiyon)
+--Cyberpunk 2077 (Aksiyon),
 (7,5),
 
---The Last of Us Part I (Aksiyon)
+--The Last of Us Part I (Aksiyon),
 (8,5),
 
---The Witcher 3: Wild Hunt (Aksiyon, RPG)
+--The Witcher 3: Wild Hunt (Aksiyon, RPG),
 (9,1), (9,5),
 
---God of War (Aksiyon)
+--God of War (Aksiyon),
 (10,5)
 
 
---  Güncelleme 
+	--  Güncelleme 
 ---------------
 
 update genres set price = '9,99' where game_id = 1
@@ -176,7 +176,7 @@ select
 from games;
 
 
---  Raporlama 
+	--  Raporlama 
 --------------
 
 -- 1.Tüm Oyunlar Listesi: Oyunun adı, Fiyatı ve Geliştirici Firmanın Adını yan yana getirin (JOIN kullanın).
