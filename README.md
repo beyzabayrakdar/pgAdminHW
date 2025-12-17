@@ -1,0 +1,2 @@
+# pgAdminHW
+sql basics
