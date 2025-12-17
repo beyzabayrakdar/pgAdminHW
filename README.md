@@ -83,6 +83,7 @@ insert into developers (company_name, country, founded_year) values
 ('CD Projekt Red', 'Polonya', 2002);
 
 
+
 insert into games (title, price, release_date, developer_id, rates) values
 
 ('Fifa Online 3', 9.99, '2012-12-18', 1, 8.2),
@@ -106,6 +107,7 @@ insert into games (title, price, release_date, developer_id, rates) values
 ('God of War', 49.99, '2018-04-20', 2, 10,)
         
 
+
 insert into genre (genre_name, genre_description) values
 
 ('RPG', 'Role Playing Game'),
@@ -119,6 +121,7 @@ insert into genre (genre_name, genre_description) values
 ('Action', 'Aksiyon'),
 
 ('Sports', 'Spor');
+
 
 
 insert into games_genres (games_id, genres_id) values
