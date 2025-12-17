@@ -4,6 +4,7 @@ sql basics
 --  Tablo Oluşturma
 --------------------
 create table developers (
+
 	developers_id serial primary key,
 	
 	company_name varchar not null,
@@ -14,11 +15,17 @@ create table developers (
 );
 
 create table games (
+
 	game_id serial primary key,
+	
 	title varchar not null,
+	
 	price decimal(10, 2),
+	
 	release_date date,
+	
 	developer_id int,
+	
 	rates decimal(3, 1),
 
 -- Foreign Key Tanımlama (One-to-Many)
