@@ -5,8 +5,11 @@ sql basics
 --------------------
 create table developers (
 	developers_id serial primary key,
+	
 	company_name varchar not null,
+	
 	country varchar,
+	
 	founded_year int
 );
 
