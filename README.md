@@ -28,6 +28,8 @@ create table games (
 	
 	rates decimal(3, 1),
 
+--
+
 	-- Foreign Key Tanımlama (One-to-Many)
 ---------------------------------------
 
@@ -52,6 +54,8 @@ create table games_genres (
 	games_id int,
 	
 	genres_id int,
+
+--
 
 	-- Foreign Key Tanımlama (Many-to-Many)
 ----------------------------------------
@@ -127,33 +131,43 @@ insert into genre (genre_name, genre_description) values
 insert into games_genres (games_id, genres_id) values
 
 --Fifa Online 3 (Spor),
+
 (1,6),
 
 --Grand Theft Auto: San Andreas (Aksiyon),
+
 (2,5),
 
 --Starfield (Aksiyon RPG),       
+
 (3,1), (3,5),       
 
 --The Elder Scrolls V: Skyrim (Aksiyon, RPG, Open World),
+
 (4,1), (4,2), (4,5),
 
 --Red Dead Redemption 2 (Aksiyon),
+
 (5,5),
 
 --League of Legends (Moba),
+
 (6,3),
 
 --Cyberpunk 2077 (Aksiyon),
+
 (7,5),
 
 --The Last of Us Part I (Aksiyon),
+
 (8,5),
 
 --The Witcher 3: Wild Hunt (Aksiyon, RPG),
+
 (9,1), (9,5),
 
 --God of War (Aksiyon),
+
 (10,5)
 
 
